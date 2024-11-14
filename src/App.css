@@ -1,7 +1,27 @@
+/* Google Font Import for Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Global Styles */
+body {
+  background-color: #FAF9F6;  /* Light background color */
+  color: #333333;  /* Default text color */
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;  /* Bold text for the entire site */
+}
+
+/* Make sure the root takes up at least the full height of the screen */
+#root {
+  min-height: 100vh;
+}
+
+/* App Container */
 .App {
   text-align: center;
 }
 
+/* App Logo (used in your project) */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,6 +33,7 @@
   }
 }
 
+/* Header Styles */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,6 +45,7 @@
   color: white;
 }
 
+/* Link Styling */
 .App-link {
   color: #61dafb;
 }
@@ -34,5 +56,69 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* For the Home Page and container layout */
+.home-container {
+  margin-top: 80px; /* Adjust this value to match your navbar height */
+  display: flex;
+  flex-direction: row;  /* Horizontal layout for large screens */
+  align-items: center;  /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  height: 100vh;  /* Take up full viewport height */
+  padding: 5vw;  /* Responsive padding based on viewport width */
+}
+
+.image-container {
+  width: 100%; /* The container will take up the full width of its parent */
+  aspect-ratio: 3 / 4; /* This ensures the aspect ratio remains 3:4 */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image within the container */
+  background-color: #ccc; /* Optional: background color for fallback */
+}
+
+
+
+.text-container {
+  flex: 1;
+  padding: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.text-container h1 {
+  font-size: 8vw;  /* Font size based on viewport width */
+}
+
+.text-container h2 {
+  font-size: 5vw;
+  font-weight: normal;
+}
+
+.text-container h3 {
+  font-size: 4vw;
+  font-weight: normal;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;  /* Stack content vertically on small screens */
+  }
+
+  .image-container {
+    width: 80vw;
+    height: 60vh;
+  }
+
+  .text-container h1 {
+    font-size: 10vw;
+  }
+
+  .text-container h2, .text-container h3 {
+    font-size: 6vw;
   }
 }

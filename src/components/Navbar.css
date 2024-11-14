@@ -1,0 +1,67 @@
+/* src/components/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #FAF9F6; /* Light background */
+    color: #333333;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures the navbar spans the full width */
+    z-index: 1000; /* Keeps the navbar on top of other content */
+    box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+    overflow: hidden; /* Prevents overflow issues */
+  }
+  
+  .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-between; /* Ensures equal space between the links */
+    gap: 20px; /* Adds space between each link */
+  }
+  
+  .nav-links a {
+    color: #333333;
+    text-decoration: none;
+    padding: 5px 10px; /* Adjust the padding for each link */
+    font-size: 16px; /* Adjust font size if needed */
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 15px; /* Reduce padding on smaller screens */
+    }
+  
+    .nav-links {
+      gap: 15px; /* Reduce the gap between links */
+    }
+  
+    .nav-links a {
+      padding: 5px 8px; /* Adjust padding for each link */
+      font-size: 14px; /* Reduce font size */
+    }
+  
+    /* Optional: Stack the logo and links vertically on smaller screens */
+    .nav-links {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items */
+      gap: 10px; /* Reduce gap */
+    }
+  }
+  
+  
+  
+  
+  

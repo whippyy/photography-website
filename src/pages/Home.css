@@ -1,0 +1,57 @@
+/* src/pages/Home.css */
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.image-container {
+  flex: 1;
+  aspect-ratio: 3 / 4;  /* Ensures the image maintains a 3:4 ratio */
+  background-size: cover;
+  background-position: center;
+  height: auto;  /* Height is automatically calculated based on aspect-ratio */
+  max-width: 100%;
+}
+
+.rectangle {
+  width: 80%; /* Make the rectangle 80% of the container width */
+  padding-top: 100%; /* Padding trick to create 3:4 aspect ratio */
+  background-color: #ccc; /* Gray background for now */
+  position: relative; /* Add your image here */
+  background-size: cover;
+  background-position: center;
+}
+
+.text-container {
+  flex: 1; /* Takes up the other half of the space */
+  padding: 20px; /* Add some padding */
+  display: flex;
+  flex-direction: column; /* Stack the text vertically */
+  justify-content: center; /* Center text vertically */
+  text-align: left; /* Align text to the left */
+  color: #333; /* Text color */
+}
+
+.text-container h1, .text-container h2, .text-container h3 {
+  margin: 10px 0; /* Space out the text elements */
+}
+
+.text-container h1 {
+  font-size: 3rem; /* Large font for "Henry" */
+  font-weight: bold;
+}
+
+.text-container h2, .text-container h3 {
+  font-size: 2rem; /* Adjust these as per your need */
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    /* For smaller screens, you can adjust the flex properties or image size */
+    width: 100%; /* Make the image take full width on smaller screens */
+  }
+}
